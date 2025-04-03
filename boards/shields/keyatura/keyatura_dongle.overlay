@@ -23,7 +23,7 @@
     };
 };
 
-&right_listener {
+&glidepoint_listener {
     status = "okay";
     input-processors = <&zip_temp_layer 4 500>;
 

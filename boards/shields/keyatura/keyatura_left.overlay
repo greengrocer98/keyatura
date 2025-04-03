@@ -1,18 +1,1 @@
 #include "keyatura.dtsi"
-#include "trackball.dtsi"
-
-&spi0 {
-    status = "okay";
-};
-
-&trackball {
-    status = "okay";
-};
-
-&right_split {
-    status = "disabled";
-};
-
-&left_split {
-    device = <&trackball>;
-};

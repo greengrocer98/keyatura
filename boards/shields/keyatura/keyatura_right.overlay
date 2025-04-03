@@ -1,5 +1,5 @@
 #include "keyatura.dtsi"
-#include "trackball.dtsi"
+#include "cirque.dtsi"
 
 &kscan0 {
     col-gpios
@@ -15,18 +15,14 @@
 	col-offset = <5>;
 };
 
-&spi0 {
+&spi1 {
     status = "okay";
 };
 
-&trackball {
+&glidepoint {
     status = "okay";
 };
 
-&left_split {
-    status = "disabled";
-};
-
-&right_split {
-    device = <&trackball>;
+&glidepoint_split {
+    device = <&glidepoint>;
 };

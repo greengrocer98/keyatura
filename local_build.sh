@@ -14,7 +14,7 @@ build_and_copy () {
         -d "$CURRENT_DIR/build/$side" -- \
         -DZMK_CONFIG="$CURRENT_DIR" \
         -DSHIELD=keyatura_$side \
-        -DZMK_EXTRA_MODULES="$HOME/zmk_modules/zmk-pmw3610-driver" \
+        -DZMK_EXTRA_MODULES="$HOME/zmk_modules/cirque-input-module" \
 
     cp "$CURRENT_DIR/build/$side/zephyr/zmk.uf2" "$CURRENT_DIR/build/$side/keyatura_$side.uf2"
 }
@@ -57,9 +57,9 @@ mkdir -p $CURRENT_DIR/build
 
 pushd $ZMK_APP_DIR
 
+# build_dongle 
 # build_and_copy left
-# build_and_copy right
-build_dongle 
+build_and_copy right
 # build_reset
 
 deactivate
