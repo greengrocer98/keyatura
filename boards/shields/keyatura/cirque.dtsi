@@ -32,10 +32,10 @@
         spi-max-frequency = <1000000>;
         dr-gpios = <&gpio0 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
 
-        sensitivity = "2x";
+        sensitivity = "4x";
         x-invert;
-        rotate-90;
         no-secondary-tap;
+        //rotate-90;
         //sleep;
         //no-taps;
     };

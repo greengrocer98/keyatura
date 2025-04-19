@@ -2,6 +2,7 @@
 #include <dt-bindings/zmk/input_transform.h>
 #include "keyatura-layouts.dtsi"
 #include "keyatura.dtsi"
+#include "cirque.dtsi"
 
 / {
     chosen {
@@ -23,9 +24,19 @@
     };
 };
 
+&spi1 {
+    status = "okay";
+};
+
+&glidepoint {
+    status = "okay";
+};
+
 &glidepoint_listener {
     status = "okay";
-    input-processors = <&zip_temp_layer 4 500>;
+    device = <&glidepoint>;
+    input-processors = <&zip_xy_scaler 2 1>;
+
 
     scroll-scaler {
         layers = <2>;
