@@ -26,19 +26,32 @@
 
         diode-direction = "col2row";
 		row-gpios
-			= <&gpio1 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-			, <&gpio0 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-			, <&gpio1 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+			= <&gpio1 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
 			, <&gpio1 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+			, <&gpio0 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+			, <&gpio0 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
 
-        col-gpios
-            = <&gpio1 15 GPIO_ACTIVE_HIGH>
-            , <&gpio1 13 GPIO_ACTIVE_HIGH>
-            , <&gpio1 11 GPIO_ACTIVE_HIGH>
-            , <&gpio0 10 GPIO_ACTIVE_HIGH>
-            , <&gpio0 9 GPIO_ACTIVE_HIGH>
-            ;
+    };
+
+    aliases {
+        led-red = &led0;
+        led-green = &led1;
+        led-blue = &led2;
+    };
+
+    leds {
+        compatible = "gpio-leds";
+        status = "okay";
+        led0: led_0 {
+            gpios = <&gpio0 24 GPIO_ACTIVE_HIGH>;  // connected to P0.24
+        };
+        led1: led_1 {
+            gpios = <&gpio1 0 GPIO_ACTIVE_HIGH>;  //  connected to P1.00
+        };
+        led2: led_2 {
+            gpios = <&gpio0 11 GPIO_ACTIVE_HIGH>;  // connected to P0.11
+        };
     };
 
 };

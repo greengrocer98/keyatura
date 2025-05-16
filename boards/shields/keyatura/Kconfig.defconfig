@@ -16,4 +16,7 @@ if SHIELD_KEYATURA_LEFT || SHIELD_KEYATURA_RIGHT || SHIELD_KEYATURA_DONGLE
 config ZMK_SPLIT
     default y
 
+config ZMK_BLE
+	default y
+
 endif

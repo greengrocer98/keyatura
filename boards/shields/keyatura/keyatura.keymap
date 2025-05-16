@@ -3,6 +3,8 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
+#include <behaviors/rgbled_widget.dtsi>
+
 #define U_TAPPING_TERM 220
 #define U_QUICK_TAP 200
 
@@ -91,7 +93,7 @@
 
         F_layer {
             bindings = <
-&kp F6   &kp F7   &kp F8   &kp F9   &kp F10  &studio_unlock  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR   &trans
+&kp F6   &kp F7   &kp F8   &kp F9   &kp F10  &studio_unlock  &ind_bat        &ind_con        &kp DOLLAR   &trans
 &kp F1   &kp F2   &kp F3   &kp F4   &kp F5   &kp AMPS        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp TILDE    &kp SINGLE_QUOTE
 &kp F11  &kp F12  &kp F13  &kp F14  &kp F15  &kp ASTERISK    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PERCENT  &trans
          &trans   &trans   &trans   &trans   &kp LA(LSHIFT)  &kp DELETE
