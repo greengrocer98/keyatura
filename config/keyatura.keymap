@@ -74,10 +74,10 @@
 
         BASE {
             bindings = <
-&kp Q  &kp W              &kp E              &kp R            &kp T              &kp Y      &kp U                  &kp I      &kp O    &kp P
-&kp A  &kp S              &kp D              &kp F            &kp G              &kp H      &kp J                  &kp K      &kp L    &kp SEMI
-&kp Z  &kp X              &kp C              &kp V            &kp B              &kp N      &kp M                  &kp COMMA  &kp DOT  &kp FSLH
-       &u_mt LCTRL ENTER  &u_mt LSHFT SPACE  &lt 2 BACKSPACE  &u_mt LWIN DELETE  &lt 1 TAB  &u_mt LEFT_ALT ESCAPE
+&kp Q  &kp W              &kp E              &kp R                     &kp T         &kp Y      &kp U                  &kp I      &kp O    &kp P
+&kp A  &kp S              &kp D              &kp F                     &kp G         &kp H      &kp J                  &kp K      &kp L    &kp SEMI
+&kp Z  &kp X              &kp C              &kp V                     &kp B         &kp N      &kp M                  &kp COMMA  &kp DOT  &kp FSLH
+       &u_mt LCTRL ENTER  &u_mt LSHFT SPACE  &u_mt LEFT_WIN BACKSPACE  &lt 2 DELETE  &lt 1 TAB  &u_mt LEFT_ALT ESCAPE
             >;
         };
 
@@ -92,10 +92,10 @@
 
         F_layer {
             bindings = <
-&kp F6   &kp F7   &kp F8   &kp F9   &kp F10  &studio_unlock  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR   &msc SCRL_LEFT
-&kp F1   &kp F2   &kp F3   &kp F4   &kp F5   &kp AMPS        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp TILDE    &kp SINGLE_QUOTE
-&kp F11  &kp F12  &kp F13  &kp F14  &kp F15  &kp ASTERISK    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PERCENT  &msc SCRL_RIGHT
-         &trans   &trans   &trans   &trans   &msc SCRL_UP    &msc SCRL_DOWN
+&kp F6   &kp F7     &kp F8          &kp F9        &kp F10  &studio_unlock  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR   &msc SCRL_LEFT
+&kp F1   &kp F2     &kp F3          &kp F4        &kp F5   &kp AMPS        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp TILDE    &kp SINGLE_QUOTE
+&kp F11  &kp F12    &kp F13         &kp F14       &kp F15  &kp ASTERISK    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PERCENT  &msc SCRL_RIGHT
+         &kp LCTRL  &kp LEFT_SHIFT  &kp LEFT_ALT  &trans   &trans          &trans
             >;
         };
     };
