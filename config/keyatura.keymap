@@ -2,7 +2,8 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/pointing.h>
+
+#include <behaviors/rgbled_widget.dtsi>
 
 #define U_TAPPING_TERM 220
 #define U_QUICK_TAP 200
@@ -29,6 +30,11 @@
         BrakRight {
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <22 23>;
+        };
+
+        Delete {
+            bindings = <&kp DELETE>;
+            key-positions = <8 9>;
         };
 
         CapsWord {
