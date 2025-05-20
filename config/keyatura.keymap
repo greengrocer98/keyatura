@@ -89,7 +89,7 @@
 
         NAV {
             bindings = <
-&kp N6    &kp N7             &kp N8             &kp N9                &kp N0   &kp C_PLAY_PAUSE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp PRINTSCREEN  &out OUT_TOG
+&kp N6    &kp N7             &kp N8             &kp N9                &kp N0   &kp K_PLAY_PAUSE  &kp K_VOLUME_DOWN  &kp K_VOLUME_UP  &kp PRINTSCREEN  &out OUT_TOG
 &kp N1    &kp N2             &kp N3             &kp N4                &kp N5   &kp LEFT_ARROW    &kp DOWN           &kp UP_ARROW     &kp RIGHT        &bt BT_NXT
 &kp PLUS  &kp ASTERISK       &kp EQUAL          &kp MINUS             &kp DOT  &kp HOME          &kp PAGE_DOWN      &kp PG_UP        &kp END          &kp BACKSLASH
           &u_mt LCTRL ENTER  &u_mt LSHFT SPACE  &u_mt LALT BACKSPACE  &trans   &trans            &trans
@@ -98,9 +98,9 @@
 
         F_layer {
             bindings = <
-&kp F6   &kp F7     &kp F8          &kp F9        &kp F10  &studio_unlock  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR   &msc SCRL_LEFT
-&kp F1   &kp F2     &kp F3          &kp F4        &kp F5   &kp AMPS        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp TILDE    &kp SINGLE_QUOTE
-&kp F11  &kp F12    &kp F13         &kp F14       &kp F15  &kp ASTERISK    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PERCENT  &msc SCRL_RIGHT
+&kp F6   &kp F7   &kp F8   &kp F9   &kp F10  &studio_unlock  &ind_bat        &ind_con        &kp DOLLAR   &trans
+&kp F1   &kp F2   &kp F3   &kp F4   &kp F5   &kp AMPS        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp TILDE    &kp SINGLE_QUOTE
+&kp F11  &kp F12  &kp F13  &kp F14  &kp F15  &kp ASTERISK    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PERCENT  &trans
          &kp LCTRL  &kp LEFT_SHIFT  &kp LEFT_ALT  &trans   &trans          &trans
             >;
         };
