@@ -13,3 +13,7 @@
 &default_transform {
 	col-offset = <5>;
 };
+
+&mouse_split {
+    status = "disabled";
+};

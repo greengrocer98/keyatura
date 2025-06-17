@@ -4,5 +4,8 @@ config SHIELD_KEYATURA_LEFT
 config SHIELD_KEYATURA_RIGHT
     def_bool $(shields_list_contains,keyatura_right)
 
+config SHIELD_KEYATURA_MOUSE
+    def_bool $(shields_list_contains,keyatura_mouse)
+
 config SHIELD_KEYATURA_DONGLE
     def_bool $(shields_list_contains,keyatura_dongle)

@@ -6,7 +6,7 @@ set -euxo pipefail
 # 1. https://zmk.dev/docs/development/setup
 # 2. checkout zmk repo to feat/pointers-move-scroll on petejohansson's repo
 
-build_and_copy () {
+build_halves () {
     local side=$1
     rm -rf $CURRENT_DIR/build/$side
     west build \
@@ -15,6 +15,19 @@ build_and_copy () {
         -DZMK_CONFIG="$CURRENT_DIR" \
         -DSHIELD=keyatura_$side \
         -DZMK_EXTRA_MODULES="$HOME/zmk_modules/zmk-rgbled-widget" \
+
+    cp "$CURRENT_DIR/build/$side/zephyr/zmk.uf2" "$CURRENT_DIR/build/$side/keyatura_$side.uf2"
+}
+
+build_mouse () {
+    local side=mouse
+    rm -rf $CURRENT_DIR/build/$side
+    west build \
+        -p -b nice_nano_v2 \
+        -d "$CURRENT_DIR/build/$side" -- \
+        -DZMK_CONFIG="$CURRENT_DIR" \
+        -DSHIELD=keyatura_$side \
+        -DZMK_EXTRA_MODULES="'$HOME/zmk_modules/zmk-pmw3610-driver;$HOME/zmk_modules/zmk-rgbled-widget'" \
 
     cp "$CURRENT_DIR/build/$side/zephyr/zmk.uf2" "$CURRENT_DIR/build/$side/keyatura_$side.uf2"
 }
@@ -58,9 +71,10 @@ mkdir -p $CURRENT_DIR/build
 
 pushd $ZMK_APP_DIR
 
-# build_and_copy left
-build_and_copy right
-# build_dongle 
+# build_halves left
+# build_halves right
+build_dongle 
+# build_mouse
 # build_reset
 
 deactivate

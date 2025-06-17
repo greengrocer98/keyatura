@@ -42,6 +42,22 @@
 
     };
 
+    split_inputs {
+        #address-cells = <1>;
+        #size-cells = <0>;
+
+        mouse_split: mouse_split@0 {
+            compatible = "zmk,input-split";
+            reg = <0>;
+        };
+    };
+
+    mouse_listener: mouse_listener {
+        compatible = "zmk,input-listener";
+        status = "disabled";
+        device = <&mouse_split>;
+    };
+
     aliases {
         led-red = &led0;
         led-green = &led1;

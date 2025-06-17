@@ -9,3 +9,7 @@
         , <&gpio1 11 GPIO_ACTIVE_HIGH>
         ;
 };
+
+&mouse_split {
+    status = "disabled";
+};

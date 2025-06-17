@@ -22,3 +22,19 @@
         require-prior-idle-ms = <500>;
     };
 };
+
+&mouse_listener {
+    status = "okay";
+    input-processors = <&zip_temp_layer 1 500>;
+
+    scroll-scaler {
+        layers = <2>;
+        input-processors = <&zip_xy_scaler 1 2 &zip_xy_to_scroll_mapper>;
+        process-next;
+    };
+
+    sniper {
+        layers = <3>;
+        input-processors = <&zip_xy_scaler 1 2>;
+    };
+};

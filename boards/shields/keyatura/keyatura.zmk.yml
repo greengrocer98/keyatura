@@ -7,7 +7,9 @@ requires: [pro_micro]
 features:
   - keys
   - studio
+  - pointer
 siblings:
   - keyatura_left
   - keyatura_right
+  - keyatura_mouse
   - keyatura_dongle
