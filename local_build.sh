@@ -31,26 +31,14 @@ build_mouse () {
     export NRFXLIB_MODULE_DIRS="$HOME/zmk-esb/zmk-feature-split-esb/nrfxlib"
     export ZMK_ESB_MODULE_DIRS="$HOME/zmk-esb/zmk-feature-split-esb"
     export ZMK_RGBLED_WIDGET="$HOME/zmk_modules/zmk-rgbled-widget"
-    export ZMK_MODULE_DIRS="${ZMK_ESB_MODULE_DIRS};${NRF_MODULE_DIRS};${NRFXLIB_MODULE_DIRS};${ZMK_RGBLED_WIDGET}"
+    export ZMK_PMW_3610_DRIVER="$HOME/zmk_modules/zmk-pmw3610-driver"
+    export ZMK_MODULE_DIRS="${ZMK_ESB_MODULE_DIRS};${NRF_MODULE_DIRS};${NRFXLIB_MODULE_DIRS};${ZMK_PMW_3610_DRIVER};${ZMK_RGBLED_WIDGET}"
     west build \
         -p -b nice_nano_v2 \
         -d "$CURRENT_DIR/build/$side" -- \
         -DZMK_CONFIG="$CURRENT_DIR" \
         -DSHIELD=keyatura_$side \
-        -DZMK_EXTRA_MODULES="'$HOME/zmk_modules/zmk-pmw3610-driver;$HOME/zmk_modules/zmk-rgbled-widget'" \
-
-    cp "$CURRENT_DIR/build/$side/zephyr/zmk.uf2" "$CURRENT_DIR/build/$side/keyatura_$side.uf2"
-}
-
-build_mouse () {
-    local side=mouse
-    rm -rf $CURRENT_DIR/build/$side
-    west build \
-        -p -b nice_nano_v2 \
-        -d "$CURRENT_DIR/build/$side" -- \
-        -DZMK_CONFIG="$CURRENT_DIR" \
-        -DSHIELD=keyatura_$side \
-        -DZMK_EXTRA_MODULES="$HOME/zmk_modules/zmk-rgbled-widget" \
+        -DZMK_EXTRA_MODULES="${ZMK_MODULE_DIRS}"
 
     cp "$CURRENT_DIR/build/$side/zephyr/zmk.uf2" "$CURRENT_DIR/build/$side/keyatura_$side.uf2"
 }
@@ -100,7 +88,7 @@ pushd $ZMK_APP_DIR
 
 # build_and_halves left
 # build_and_halves right
-build_dongle 
+# build_dongle 
 build_mouse
 # build_reset
 

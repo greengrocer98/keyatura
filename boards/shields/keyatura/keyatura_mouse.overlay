@@ -1,4 +1,5 @@
 #include "keyatura.dtsi"
+#include "keyatura_esb_addr.dtsi"
 
 #define INPUT_EV_KEY 0x01               /**< Key event */
 #define INPUT_EV_REL 0x02               /**< Relative coordinate event */
