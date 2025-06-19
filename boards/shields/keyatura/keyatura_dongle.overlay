@@ -3,13 +3,18 @@
 #include "keyatura-layouts.dtsi"
 #include "keyatura.dtsi"
 
+
+&physical_layout0 {
+    transform = <&default_transform>;
+};
+
 / {
     chosen {
         zmk,kscan = &mock_kscan;
         zmk,physical-layout = &physical_layout0;
     }; 
 
-    mock_kscan: kscan_0 {
+    mock_kscan: kscan0 {
         compatible = "zmk,kscan-mock";
         columns = <0>;
         rows = <0>;
@@ -25,16 +30,10 @@
 
 &mouse_listener {
     status = "okay";
-    input-processors = <&zip_temp_layer 1 500>;
-
-    scroll-scaler {
-        layers = <2>;
-        input-processors = <&zip_xy_scaler 1 2 &zip_xy_to_scroll_mapper>;
-        process-next;
-    };
+    input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
 
     sniper {
-        layers = <3>;
+        layers = <2>;
         input-processors = <&zip_xy_scaler 1 2>;
     };
 };

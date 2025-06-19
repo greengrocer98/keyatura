@@ -74,7 +74,7 @@ pushd $ZMK_APP_DIR
 # build_halves left
 # build_halves right
 build_dongle 
-# build_mouse
+build_mouse
 # build_reset
 
 deactivate
