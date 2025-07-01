@@ -98,8 +98,8 @@ mkdir -p $CURRENT_DIR/build
 
 pushd $ZMK_APP_DIR
 
-# build_halves left
-# build_halves right
+# build_and_halves left
+# build_and_halves right
 build_dongle 
 build_mouse
 # build_reset
