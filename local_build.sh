@@ -67,8 +67,8 @@ mkdir -p $CURRENT_DIR/build
 
 pushd $ZMK_APP_DIR
 
-# build_and_copy left
-# build_and_copy right
+build_and_copy left
+build_and_copy right
 build_dongle 
 build_reset
 
