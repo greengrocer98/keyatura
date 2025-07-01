@@ -2,6 +2,7 @@
 #include <dt-bindings/zmk/input_transform.h>
 #include "keyatura-layouts.dtsi"
 #include "keyatura.dtsi"
+#include "keyatura_esb_addr.dtsi"
 
 
 &physical_layout0 {

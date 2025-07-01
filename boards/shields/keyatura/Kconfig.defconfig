@@ -16,7 +16,4 @@ if SHIELD_KEYATURA_LEFT || SHIELD_KEYATURA_RIGHT || SHIELD_KEYATURA_MOUSE || SHI
 config ZMK_SPLIT
     default y
 
-config ZMK_BLE
-	default y
-
 endif
